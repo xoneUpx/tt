@@ -1,4 +1,4 @@
-import PostType from '../types/PostType.js'
+//import PostType from '../types/PostType.js'
 const Post = (props:PostType) => {
   return (<>
     <h1>Post</h1>
@@ -8,5 +8,12 @@ const Post = (props:PostType) => {
     <p>{props.router_id}</p>
 </>);
 };
-export default Post;
 
+type PostType = {
+  id: number,
+  title: string,
+  router_id: string,
+  body: string,
+
+}
+export default Post;
