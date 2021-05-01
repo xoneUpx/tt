@@ -53,7 +53,7 @@ export default function Home(props) {
           </a>
     <ul style={{position: "relative"}}>
     {props.posts.slice(0,10).map(post => {
-    return ( <li><Post id={post.id} title={post.title} /></li>)
+    return ( <li><Post id={post.id} title={post.title} body={post.body} router_id="routerid" /></li>)
 })}
     </ul>
         </div>
