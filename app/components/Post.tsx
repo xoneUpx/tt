@@ -1,4 +1,4 @@
-import PostType from '../types/PostType.ts'
+import PostType from '../types/PostType.js'
 const Post = (props:PostType) => {
   return (<>
     <h1>Post</h1>
