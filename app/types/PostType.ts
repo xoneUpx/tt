@@ -5,4 +5,4 @@ type PostType = {
   body: string,
 
 }
-export PostType;
+export default PostType;
