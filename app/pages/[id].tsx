@@ -5,7 +5,7 @@ import { GetStaticProps, GetStaticPaths} from 'next';
 const Posti = ({post}) =>{
   const router = useRouter();
   return (
-    <Post body={post.body} title={post.title} id={post.id} router_id = {router.query.id} />
+    <Post body={post.body} title={post.title} id={post.id} router_id = 'routerid' />
 )
 }
 export const getStaticProps:GetStaticProps = async (context) =>{
