@@ -15,7 +15,7 @@ export const getStaticProps:GetStaticProps = async (context) =>{
   if (!post) {
     return { notFound: true}
 }
-  //add typecheckings
+  //add typechecking
   return {
     props: {post,},
     revalidate: 60
