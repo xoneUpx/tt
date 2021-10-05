@@ -9,15 +9,21 @@ const Posti = ({post}) =>{
 )
 }
 export const getStaticProps:GetStaticProps = async (context) =>{
-  const { params } = context; 
+  const { params } = context;
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
   const post = await res.json();
-  //add typechecking
-  return {
-    props: {post,}
+  if (!post) {
+    return { notFound: true}
 }
-  
-} 
+  //add typecheckings
+  return {
+    props: {post,},
+    revalidate: 60
+}
+
+}
+//fallback can be used to combine static and dynamic generation
+//but: there might not be any value/object to fallback to!
 export const getStaticPaths = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts")
   const posts = await res.json();
