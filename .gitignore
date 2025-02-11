@@ -5,3 +5,6 @@ backend/
 docker*
 Docker*
 .gitignore
+
+# Local Netlify folder
+.netlify
